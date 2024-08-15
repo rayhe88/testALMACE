@@ -64,8 +64,7 @@ done
 echo `pwd`
 
 
-#python3  runPynta.py
-python3  test_OPT2.py
+python3  test_OPT.py  CO_Cu36.xyz ${myhost[0]}
 
 echo " ===================================  DONE  ===================================="
 echo -n " Finishing :"
