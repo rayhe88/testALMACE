@@ -1,0 +1,7 @@
+module use /soft/modulefiles/
+module load conda
+conda activate /lus/eagle/projects/catalysis_aesp/raymundohe/maceFlow/mace_env311
+module load PrgEnv-nvhpc nvhpc cudatoolkit-standalone/11.8.0
+module load cray-hdf5
+module list
+export MPICH_GPU_SUPPORT_ENABLED=0

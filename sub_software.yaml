@@ -1,0 +1,24 @@
+command: mpiexec --hosts localhost -n 4 --ppn 4 --depth=8 --cpu-bind depth --env OMP_NUM_THREADS=8
+  --env CUDA_VISIBLE_DEVICES=0,1,2,3 /soft/applications/quantum_espresso/7.3.1-nvhpc23.1-libxc610/bin/pw.x  -nk
+  4 -in PREFIX.pwi > PREFIX.pwo
+conv_thr: 1.0e-06
+degauss: 0.01
+disk_io: none
+ecutwfc: 40
+input_dft: BEEF-vdW
+kpts:
+- 3
+- 3
+- 1
+mixing_mode: local-TF
+nosym: true
+occupations: smearing
+pseudo_dir: /lus/eagle/projects/catalysis_aesp/raymundohe/espresso/pseudo
+pseudopotentials:
+  C: C.pbe-n-kjpaw_psl.1.0.0.UPF
+  Cu: Cu.pbe-spn-kjpaw_psl.1.0.0.UPF
+  H: H.pbe-kjpaw_psl.1.0.0.UPF
+  N: N.pbe-n-kjpaw_psl.1.0.0.UPF
+  O: O.pbe-n-kjpaw_psl.1.0.0.UPF
+smearing: mv
+tprnfor: true

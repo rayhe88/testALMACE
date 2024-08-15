@@ -1,0 +1,9 @@
+# Configuration file for al-mace
+# RHE
+origin : '/lus/eagle/projects/catalysis_aesp/raymundohe/testPyntaMultiNode/'
+args_foundational : "args-foundational.yaml"
+device: 'cuda'
+#force_threshold : 0.25  # eV/A force error
+#rel_force_threshold : 0.25  # relative force error
+force_threshold : 1000000.0  # eV/A force error
+rel_force_threshold : 1000000.0  # relative force error
